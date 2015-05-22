@@ -1,7 +1,9 @@
 #!/usr/bin/env bash 
 
-# sudo apt-get update
-# sudo apt-get install openjdk-7-jdk
+# intall java and setup work dir, which is /public/${node_id}/
+
+sudo apt-get update
+sudo apt-get install openjdk-7-jdk
 
 WORK_DIR=/public/`hostname -s`
 
