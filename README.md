@@ -7,6 +7,8 @@ Contains several scripts which are used to deploy and run Cassandra on an Emulab
 Scripts
 -------
 
+Two major scripts,`exec_remote.sh` and `copy_remote.sh`. You need to fill the variable `$USER`.
+
 ### Remote Excecute
 
 ```
