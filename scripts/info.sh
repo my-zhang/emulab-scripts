@@ -1,2 +1,2 @@
 #!/usr/bin/env bash 
-hostname
+echo "hello world, `hostname -s`"

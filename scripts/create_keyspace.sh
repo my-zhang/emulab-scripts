@@ -1,5 +1,7 @@
 #!/usr/bin/env bash 
 
+# create keyspace, on seed node. 
+
 WORK_DIR=/public/`hostname -s`/
 CA_RELEASE=apache-cassandra-1.2.6
 

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash 
 
+# decompress the tar file, and modify the configuration. 
+
 WORK_DIR=/public/`hostname -s`
 
 cd $WORK_DIR

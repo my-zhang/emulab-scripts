@@ -1,6 +1,9 @@
+#!/usr/bin/env bash
+
+# exec a script remotely.
 
 PARA=false
-USER="myzhang"
+USER="EMULAB_USER"
 SSH_OPTION="StrictHostKeyChecking no"
 
 while getopts "f:h:p" optname 
@@ -22,9 +25,11 @@ while read line; do
   HOST=`echo $line | cut -d " " -f 2`
 
   if $PARA; then
-    ssh -p $PORT -o "$SSH_OPTION" $USER@$HOST 'bash -s' < $SCRIPT && echo "$HOST:$PORT done" &
+    ssh -p $PORT -o "$SSH_OPTION" $USER@$HOST \
+        'bash -s' < $SCRIPT && echo "$HOST:$PORT done" &
   else
-    ssh -p $PORT -o "$SSH_OPTION" $USER@$HOST 'bash -s' < $SCRIPT
+    ssh -p $PORT -o "$SSH_OPTION" $USER@$HOST \
+        'bash -s' < $SCRIPT
     echo "$HOST:$PORT done" 
   fi
 done < $HOSTS
